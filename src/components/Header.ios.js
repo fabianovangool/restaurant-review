@@ -9,14 +9,14 @@ const Header = () => {
     <View style={HeaderStyle.header}>
       <Text
         style={{
-          fontSize: 26,
+          fontSize: 30,
         }}>
         resto
       </Text>
       <Text
         style={{
           color: '#0ca860',
-          fontSize: 26,
+          fontSize: 30,
         }}>
         Review
       </Text>

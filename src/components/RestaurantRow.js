@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 
-import Icon from 'react-native-vector-icons';
+import Icon from 'react-native-vector-icons/FontAwesome';
+import Stars from 'components/Stars';
 
 import {View, Text, StyleSheet, TouchableHighlight, Image} from 'react-native';
 
@@ -15,7 +16,9 @@ const RestaurantRow = ({place, index}) => {
       key={place.name}
       style={{backgroundColor: index % 2 === 0 ? 'white' : '#f0fff5'}}>
       <View style={styles.row}>
-        <View style={styles.edges}>{/* <Icon name="star" /> */}</View>
+        <View style={styles.stars}>
+          <Stars rating={place.rating} />
+        </View>
 
         <View style={styles.nameAddress}>
           <Text>{place.name}</Text>
@@ -34,11 +37,13 @@ const RestaurantRow = ({place, index}) => {
 
       {showInfo && (
         <View style={styles.info}>
-          <Text>Restaurant info</Text>
+          <Text>This resto is pretty coolio</Text>
           <Image
-            source={require('images/star.png')}
+            source={{uri: `http://localhost:3004/images/${place.image}`}}
             style={{
               flex: 1,
+              width: 35,
+              height: 35,
             }}
           />
         </View>
@@ -50,11 +55,11 @@ const RestaurantRow = ({place, index}) => {
 const styles = StyleSheet.create({
   button: {
     borderWidth: 1,
-    borderColor: '#0ca860',
+    borderColor: 'black',
     borderRadius: 14,
     paddingHorizontal: 10,
     paddingVertical: 3,
-    backgroundColor: 'white',
+    backgroundColor: '#2eff9e',
   },
   buttonText: {
     fontSize: 14,
@@ -86,6 +91,14 @@ const styles = StyleSheet.create({
   },
   addressText: {
     color: '#0ca860',
+  },
+  stars: {
+    flex: 1,
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    padding: 5,
+    minWidth: 50,
   },
 });
 

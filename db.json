@@ -4,7 +4,7 @@
     "name": "Dr Falafel", 
     "address": "Utrechtsestraat 59",
     "image": "star.png",
-    "rating": "3",
+    "rating": "4",
     "id": 1
   },
   {
@@ -17,22 +17,22 @@
   {
     "name": "Snackbar t Hoekske", 
     "address": "Frietlaan 3",
-    "image": "star.png",
-    "rating": "3",
+    "image": "special.png",
+    "rating": "5",
     "id": 3
   },
   {
     "name": "Choux", 
     "address": "Utrechtsestraat 45",
     "image": "star.png",
-    "rating": "3",
+    "rating": "5",
     "id": 4
   },
   {
     "name": "Bak", 
     "address": "Negen Straatjes 800",
     "image": "star.png",
-    "rating": "3",
+    "rating": "4",
     "id": 5
   },
   {
@@ -45,7 +45,7 @@
   {
     "name": "Beulings", 
     "address": "Utrechtsestraat 2",
-    "image": "star.png",
+    "image": "special.png",
     "rating": "3",
     "id": 7
   },
@@ -53,7 +53,7 @@
     "name": "Euro Pizza", 
     "address": "Negen Straatjes 234",
     "image": "star.png",
-    "rating": "3",
+    "rating": "3.5",
     "id": 8
   },
   {
@@ -67,7 +67,7 @@
     "name": "Zuzas Deli", 
     "address": "Utrechtsestraat 67",
     "image": "star.png",
-    "rating": "3",
+    "rating": "3.5",
     "id": 10
   },
   {
@@ -88,21 +88,21 @@
     "name": "Men Impossible", 
     "address": "Utrechtsestraat 523",
     "image": "star.png",
-    "rating": "3",
+    "rating": "1",
     "id": 13
   },
   {
     "name": "Public Space", 
     "address": "Negen Straatjes 21",
     "image": "star.png",
-    "rating": "3",
+    "rating": "2",
     "id": 14
   },
   {
     "name": "Holtkamp", 
     "address": "Frietlaan 1",
-    "image": "star.png",
-    "rating": "3",
+    "image": "special.png",
+    "rating": "2.5",
     "id": 15
   },
   {
@@ -116,27 +116,27 @@
     "name": "Easy and Fresh Falafel", 
     "address": "Negen Straatjes 435",
     "image": "star.png",
-    "rating": "3",
+    "rating": "4",
     "id": 17
   },
   {
     "name": "Sham West", 
     "address": "Frietlaan 25",
     "image": "star.png",
-    "rating": "3",
+    "rating": "1",
     "id": 18
   },
   {
     "name": "De Kas", 
     "address": "Utrechtsestraat 236",
     "image": "star.png",
-    "rating": "3",
+    "rating": "2.5",
     "id": 19
   },
   {
     "name": "Sham Oost", 
     "address": "Negen Straatjes 415",
-    "image": "star.png",
+    "image": "special.png",
     "rating": "3",
     "id": 20
   },

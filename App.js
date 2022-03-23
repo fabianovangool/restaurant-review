@@ -37,8 +37,8 @@ const App = () => {
           style={{
             backgroundColor: '#0ca860',
             borderRadius: 4,
-            width: 45,
-            height: 45,
+            width: 55,
+            height: 55,
           }}
         />
       </View>
