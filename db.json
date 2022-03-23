@@ -1,0 +1,158 @@
+{
+	"restaurants": [
+	{
+    "name": "Dr Falafel", 
+    "address": "Utrechtsestraat 59",
+    "image": "star.png",
+    "rating": "4",
+    "id": 1
+  },
+  {
+    "name": "Lebanese Sajeria", 
+    "address": "Negen Straatjes 49",
+    "image": "star.png",
+    "rating": "3",
+    "id": 2
+  },
+  {
+    "name": "Snackbar t Hoekske", 
+    "address": "Frietlaan 3",
+    "image": "special.png",
+    "rating": "5",
+    "id": 3
+  },
+  {
+    "name": "Choux", 
+    "address": "Utrechtsestraat 45",
+    "image": "star.png",
+    "rating": "5",
+    "id": 4
+  },
+  {
+    "name": "Bak", 
+    "address": "Negen Straatjes 800",
+    "image": "star.png",
+    "rating": "4",
+    "id": 5
+  },
+  {
+    "name": "Tigris & Eufraat", 
+    "address": "Frietlaan 234",
+    "image": "star.png",
+    "rating": "3",
+    "id": 6
+  },
+  {
+    "name": "Beulings", 
+    "address": "Utrechtsestraat 2",
+    "image": "special.png",
+    "rating": "3",
+    "id": 7
+  },
+  {
+    "name": "Euro Pizza", 
+    "address": "Negen Straatjes 234",
+    "image": "star.png",
+    "rating": "3.5",
+    "id": 8
+  },
+  {
+    "name": "Rijks", 
+    "address": "Frietlaan 54",
+    "image": "star.png",
+    "rating": "3",
+    "id": 9
+  },
+  {
+    "name": "Zuzas Deli", 
+    "address": "Utrechtsestraat 67",
+    "image": "star.png",
+    "rating": "3.5",
+    "id": 10
+  },
+  {
+    "name": "Swagat", 
+    "address": "Negen Straatjes 78",
+    "image": "star.png",
+    "rating": "3",
+    "id": 11
+  },
+  {
+    "name": "Baires Empanadas", 
+    "address": "Frietlaan 73",
+    "image": "star.png",
+    "rating": "3",
+    "id": 12
+  },
+  {
+    "name": "Men Impossible", 
+    "address": "Utrechtsestraat 523",
+    "image": "star.png",
+    "rating": "1",
+    "id": 13
+  },
+  {
+    "name": "Public Space", 
+    "address": "Negen Straatjes 21",
+    "image": "star.png",
+    "rating": "2",
+    "id": 14
+  },
+  {
+    "name": "Holtkamp", 
+    "address": "Frietlaan 1",
+    "image": "special.png",
+    "rating": "2.5",
+    "id": 15
+  },
+  {
+    "name": "Maoz", 
+    "address": "Utrechtsestraat 15",
+    "image": "star.png",
+    "rating": "3",
+    "id": 16
+  },
+  {
+    "name": "Easy and Fresh Falafel", 
+    "address": "Negen Straatjes 435",
+    "image": "star.png",
+    "rating": "4",
+    "id": 17
+  },
+  {
+    "name": "Sham West", 
+    "address": "Frietlaan 25",
+    "image": "star.png",
+    "rating": "1",
+    "id": 18
+  },
+  {
+    "name": "De Kas", 
+    "address": "Utrechtsestraat 236",
+    "image": "star.png",
+    "rating": "2.5",
+    "id": 19
+  },
+  {
+    "name": "Sham Oost", 
+    "address": "Negen Straatjes 415",
+    "image": "special.png",
+    "rating": "3",
+    "id": 20
+  },
+  {
+    "name": "Thai Take Away Nang Kwak", 
+    "address": "Frietlaan 25",
+    "image": "star.png",
+    "rating": "3",
+    "id": 21
+  },
+  {
+    "name": "Ramen Kingdom", 
+    "address": "Utrechtsestraat 236",
+    "image": "star.png",
+    "rating": "3",
+    "id": 22
+  }
+	]
+}
