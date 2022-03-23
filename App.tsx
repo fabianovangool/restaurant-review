@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
-import Header from 'components/Header';
-import RestaurantRow from 'components/RestaurantRow';
+import {Header} from './src/components/header';
+import {RestaurantRow} from './src/components/restaurant-row';
 
-import CutleryImage from 'images/cutlery.png';
+import CutleryImage from './public/images/cutlery.png';
 
 import {FlatList, StyleSheet, TextInput, View, Image} from 'react-native';
 

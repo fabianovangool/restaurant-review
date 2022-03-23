@@ -1,11 +1,10 @@
 import React, {useState} from 'react';
 
-import Icon from 'react-native-vector-icons/FontAwesome';
-import Stars from 'components/Stars';
+import {Stars} from '../stars';
 
 import {View, Text, StyleSheet, TouchableHighlight, Image} from 'react-native';
 
-const RestaurantRow = ({place, index}) => {
+export const RestaurantRow = ({place, index}) => {
   const [showInfo, setShowInfo] = useState(false);
   const infoPressed = () => {
     setShowInfo(!showInfo);
@@ -101,5 +100,3 @@ const styles = StyleSheet.create({
     minWidth: 50,
   },
 });
-
-export default RestaurantRow;

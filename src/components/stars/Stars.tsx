@@ -4,7 +4,7 @@ import {View} from 'react-native';
 
 import Icon from 'react-native-vector-icons/FontAwesome';
 
-const Stars = ({rating}) => {
+export const Stars = ({rating}) => {
   const stars = [...Array(Math.ceil(rating))];
 
   return (
@@ -16,5 +16,3 @@ const Stars = ({rating}) => {
     </View>
   );
 };
-
-export default Stars;
