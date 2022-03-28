@@ -1,85 +1,89 @@
-import React, {useEffect, useState} from 'react';
-import axios from 'axios';
+import React from 'react';
 
-import {Header} from './src/components/header';
-import {RestaurantRow} from './src/components/restaurant-row';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {NavigationContainer} from '@react-navigation/native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 
-import CutleryImage from './public/images/cutlery.png';
+import {RestaurantList} from './src/components/restaurant-list';
+import {RestaurantInfo} from './src/components/restaurant-info';
+import {About} from './src/components/about';
+import {AddReview} from './src/components/add-review';
 
-import {FlatList, StyleSheet, TextInput, View, Image} from 'react-native';
+const Stack = createNativeStackNavigator();
+const Tab = createBottomTabNavigator();
 
 const App = () => {
-  const [searchFilter, setSearchFilter] = useState();
-  const [restaurants, setRestaurants] = useState([]);
-
-  const getRestaurants = () => {
-    axios
-      .get('http://localhost:3004/restaurants')
-      .then(result => setRestaurants(result.data));
-  };
-
-  useEffect(() => {
-    getRestaurants();
-  }, []);
-
   return (
-    <View
-      style={{
-        flex: 1,
+    <Stack.Navigator
+      initialRouteName="Home"
+      screenOptions={{
+        headerTintColor: '#de5c00',
+        headerStyle: {
+          backgroundColor: '#fff08c',
+        },
+        headerShown: false,
+        headerTitleStyle: {
+          color: 'black',
+          fontSize: 22,
+        },
       }}>
-      <View
-        style={{
-          marginTop: 60,
-          alignItems: 'center',
-        }}>
-        <Image
-          source={CutleryImage}
-          style={{
-            backgroundColor: '#0ca860',
-            borderRadius: 4,
-            width: 55,
-            height: 55,
+      <Stack.Group>
+        <Stack.Screen
+          name="Home"
+          component={RestaurantList}
+          options={{
+            title: 'Home',
           }}
         />
-      </View>
-      <Header />
-
-      <TextInput
-        style={styles.input}
-        placeholder="Live Search"
-        onChangeText={text => {
-          setSearchFilter(text);
-        }}
-        value={searchFilter}
-      />
-
-      <FlatList
-        data={restaurants.filter(place => {
-          return (
-            !searchFilter ||
-            place.name.toLowerCase().indexOf(searchFilter.toLowerCase()) > -1
-          );
-        })}
-        renderItem={({item, index}) => (
-          <RestaurantRow place={item} index={index} />
-        )}
-        keyExtractor={item => item.name}
-        initialNumToRender={20}
-      />
-    </View>
+        <Stack.Screen
+          name="Info"
+          component={RestaurantInfo}
+          options={{
+            title: 'Info',
+            headerShown: true,
+          }}
+        />
+      </Stack.Group>
+      <Stack.Group screenOptions={{presentation: 'modal'}}>
+        <Stack.Screen
+          name="AddReview"
+          component={AddReview}
+          options={{
+            title: 'AddReview',
+          }}
+        />
+      </Stack.Group>
+    </Stack.Navigator>
   );
 };
 
-const styles = StyleSheet.create({
-  input: {
-    padding: 10,
-    paddingHorizontal: 20,
-    fontSize: 16,
-    color: '#444',
-    borderBottomWidth: 1,
-    borderColor: '#0ca860',
-    backgroundColor: '#edfff4',
-  },
-});
+const Tabs = () => {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator
+        screenOptions={{
+          tabBarActiveBackgroundColor: '#fff08c',
+          tabBarActiveTintColor: 'black',
+          headerShown: false,
+        }}>
+        <Tab.Screen
+          name="Home"
+          component={App}
+          options={{
+            tabBarIcon: () => <Icon name="home" color="black" size={30} />,
+          }}
+        />
+        <Tab.Screen
+          name="About"
+          component={About}
+          options={{
+            tabBarIcon: () => <Icon name="info-circle" size={30} />,
+          }}
+        />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+};
 
-export default App;
+export default Tabs;

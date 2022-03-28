@@ -11,7 +11,7 @@ export const Stars = ({rating}) => {
     <View style={{flexDirection: 'row'}}>
       {stars.map((_, i) => {
         const name = Math.floor(rating) > i ? 'star' : 'star-half';
-        return <Icon key={i} name={name} color="#2eff9e" />;
+        return <Icon key={i} name={name} color="#ffe226" />;
       })}
     </View>
   );

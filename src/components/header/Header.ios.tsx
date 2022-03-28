@@ -15,7 +15,7 @@ export const Header = () => {
       </Text>
       <Text
         style={{
-          color: '#0ca860',
+          color: '#de5c00',
           fontSize: 30,
         }}>
         Review
