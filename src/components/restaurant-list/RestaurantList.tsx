@@ -1,16 +1,18 @@
 import React, {useEffect, useState} from 'react';
 import axios from 'axios';
 
-import Header from 'components/Header';
-import RestaurantRow from 'components/RestaurantRow';
+import {Header} from '../header';
+import {RestaurantRow} from '../restaurant-row';
 
-import CutleryImage from 'images/cutlery.png';
+import CutleryImage from '../../../public/images/cutlery.png';
 
 import {FlatList, StyleSheet, TextInput, View, Image} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 
-const App = () => {
+export const RestaurantList = () => {
   const [searchFilter, setSearchFilter] = useState();
   const [restaurants, setRestaurants] = useState([]);
+  const navigation = useNavigation();
 
   const getRestaurants = () => {
     axios
@@ -26,6 +28,7 @@ const App = () => {
     <View
       style={{
         flex: 1,
+        backgroundColor: '#fff08c',
       }}>
       <View
         style={{
@@ -35,8 +38,10 @@ const App = () => {
         <Image
           source={CutleryImage}
           style={{
-            backgroundColor: '#0ca860',
+            backgroundColor: '#ffe226',
             borderRadius: 4,
+            borderWidth: 1,
+            borderColor: 'black',
             width: 55,
             height: 55,
           }}
@@ -46,7 +51,7 @@ const App = () => {
 
       <TextInput
         style={styles.input}
-        placeholder="Live Search"
+        placeholder="Search restaurant.."
         onChangeText={text => {
           setSearchFilter(text);
         }}
@@ -61,9 +66,9 @@ const App = () => {
           );
         })}
         renderItem={({item, index}) => (
-          <RestaurantRow place={item} index={index} />
+          <RestaurantRow place={item} index={index} navigation={navigation} />
         )}
-        keyExtractor={item => item.name}
+        keyExtractor={item => item.id}
         initialNumToRender={20}
       />
     </View>
@@ -77,9 +82,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: '#444',
     borderBottomWidth: 1,
-    borderColor: '#0ca860',
-    backgroundColor: '#edfff4',
+    borderColor: 'black',
+    backgroundColor: '#fffbe6',
   },
 });
-
-export default App;

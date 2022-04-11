@@ -1,20 +1,14 @@
-import React, {useState} from 'react';
+import React from 'react';
 
-import Icon from 'react-native-vector-icons/FontAwesome';
-import Stars from 'components/Stars';
+import {Stars} from '../stars';
 
-import {View, Text, StyleSheet, TouchableHighlight, Image} from 'react-native';
+import {View, Text, StyleSheet, TouchableHighlight} from 'react-native';
 
-const RestaurantRow = ({place, index}) => {
-  const [showInfo, setShowInfo] = useState(false);
-  const infoPressed = () => {
-    setShowInfo(!showInfo);
-  };
-
+export const RestaurantRow = ({place, index, navigation}) => {
   return (
     <View
       key={place.name}
-      style={{backgroundColor: index % 2 === 0 ? 'white' : '#f0fff5'}}>
+      style={{backgroundColor: index % 2 === 0 ? 'white' : '#fffbe6'}}>
       <View style={styles.row}>
         <View style={styles.stars}>
           <Stars rating={place.rating} />
@@ -27,27 +21,13 @@ const RestaurantRow = ({place, index}) => {
 
         <View style={styles.edges}>
           <TouchableHighlight
-            onPress={infoPressed}
+            onPress={() => navigation.navigate('Info', {place})}
             style={styles.button}
             underlayColor="white">
-            <Text style={styles.buttonText}>info</Text>
+            <Text style={styles.buttonText}>i</Text>
           </TouchableHighlight>
         </View>
       </View>
-
-      {showInfo && (
-        <View style={styles.info}>
-          <Text>This resto is pretty coolio</Text>
-          <Image
-            source={{uri: `http://localhost:3004/images/${place.image}`}}
-            style={{
-              flex: 1,
-              width: 35,
-              height: 35,
-            }}
-          />
-        </View>
-      )}
     </View>
   );
 };
@@ -59,10 +39,12 @@ const styles = StyleSheet.create({
     borderRadius: 14,
     paddingHorizontal: 10,
     paddingVertical: 3,
-    backgroundColor: '#2eff9e',
+    backgroundColor: 'white',
   },
   buttonText: {
     fontSize: 14,
+    color: '#de5c00',
+    fontWeight: '600',
   },
   info: {
     flex: 1,
@@ -90,7 +72,7 @@ const styles = StyleSheet.create({
     flex: 8,
   },
   addressText: {
-    color: '#0ca860',
+    color: '#997f00',
   },
   stars: {
     flex: 1,
@@ -101,5 +83,3 @@ const styles = StyleSheet.create({
     minWidth: 50,
   },
 });
-
-export default RestaurantRow;
